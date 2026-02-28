@@ -26,6 +26,7 @@ $isHome = $active && !empty($active->home);
 $wa = $this->getWebAssetManager();
 $wa->useStyle('tpl_brics_freight.styles');
 $wa->useScript('tpl_brics_freight.menu');
+$wa->useScript('tpl_brics_freight.console');
 
 HTMLHelper::_('bootstrap.framework');
 
@@ -177,6 +178,36 @@ $homeUrl  = Route::_('index.php');
             </aside>
           <?php endif; ?>
         </div>
+
+
+        <?php if ($isHome) : ?>
+          <section
+            class="operations-console card"
+            data-ops-console
+            data-fleet-url="<?php echo htmlspecialchars($this->baseurl . '/media/templates/site/tpl_brics_freight/data/fleet.csv', ENT_QUOTES, 'UTF-8'); ?>"
+            data-cargo-url="<?php echo htmlspecialchars($this->baseurl . '/media/templates/site/tpl_brics_freight/data/cargo.csv', ENT_QUOTES, 'UTF-8'); ?>"
+          >
+            <div class="ops-console__head">
+              <div>
+                <p class="section-kicker">Corridor Operations Console</p>
+                <h2>Live Freight Board</h2>
+              </div>
+              <div class="ops-console__switch" role="tablist" aria-label="Console mode">
+                <button type="button" class="ops-console__tab is-active" data-ops-tab="fleet" aria-selected="true">Fleet</button>
+                <button type="button" class="ops-console__tab" data-ops-tab="cargo" aria-selected="false">Cargo</button>
+              </div>
+            </div>
+
+            <div class="ops-console__ticker" data-ops-ticker aria-live="polite"></div>
+
+            <div class="ops-console__table-wrap">
+              <table class="ops-console__table">
+                <thead data-ops-head></thead>
+                <tbody data-ops-body></tbody>
+              </table>
+            </div>
+          </section>
+        <?php endif; ?>
 
         <?php if ($this->countModules('main-bottom')) : ?>
           <div class="main-bottom">

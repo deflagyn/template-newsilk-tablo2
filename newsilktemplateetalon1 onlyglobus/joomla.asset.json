@@ -14,7 +14,14 @@
       "attributes": {
         "defer": true
       }
+    },
+    {
+      "name": "tpl_brics_freight.console",
+      "type": "script",
+      "uri": "js/operations-console.js",
+      "attributes": {
+        "defer": true
+      }
     }
   ]
 }
-
