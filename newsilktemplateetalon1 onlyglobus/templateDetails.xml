@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="template" client="site">
+  <name>tpl_brics_freight</name>
+  <version>1.1.0</version>
+  <creationDate>February 2026</creationDate>
+  <author>New Silk Road Team</author>
+  <authorEmail>admin@example.com</authorEmail>
+  <description>Технологичный шаблон для логистической платформы BRICS+ в едином стиле (цвета/шрифты/компоненты), с адаптивным меню, мультиязычностью и поддержкой страниц статей.</description>
+  <inheritable>0</inheritable>
+
+  <files>
+    <filename>index.php</filename>
+    <filename>component.php</filename>
+    <filename>error.php</filename>
+    <filename>offline.php</filename>
+    <filename>joomla.asset.json</filename>
+    <filename>templateDetails.xml</filename>
+    <folder>html</folder>
+    <folder>language</folder>
+  </files>
+
+  <media destination="templates/site/tpl_brics_freight" folder="media">
+    <folder>css</folder>
+    <folder>js</folder>
+    <folder>images</folder>
+    <folder>fonts</folder>
+    <folder>data</folder>
+  </media>
+
+  <positions>
+    <position>topbar</position>
+    <position>languages</position>
+    <position>header-nav</position>
+    <position>header-cta</position>
+    <position>mobile-languages</position>
+    <position>mobile-nav</position>
+
+    <position>banner</position>
+    <position>breadcrumbs</position>
+    <position>main-top</position>
+    <position>main-bottom</position>
+    <position>sidebar-left</position>
+    <position>sidebar-right</position>
+
+    <position>footer</position>
+    <position>footer-bottom</position>
+    <position>debug</position>
+  </positions>
+
+  <languages folder="language">
+    <language tag="en-GB">en-GB/tpl_brics_freight.ini</language>
+    <language tag="en-GB">en-GB/tpl_brics_freight.sys.ini</language>
+    <language tag="ru-RU">ru-RU/tpl_brics_freight.ini</language>
+    <language tag="ru-RU">ru-RU/tpl_brics_freight.sys.ini</language>
+  </languages>
+
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+        <field
+          name="brand_text"
+          type="text"
+          label="TPL_BRICS_FREIGHT_BRAND_TEXT_LABEL"
+          description="TPL_BRICS_FREIGHT_BRAND_TEXT_DESC"
+          default="NEW SILK ROAD BRICS+"
+          filter="string"
+        />
+
+        <field
+          name="enable_globe"
+          type="radio"
+          label="TPL_BRICS_FREIGHT_ENABLE_GLOBE_LABEL"
+          description="TPL_BRICS_FREIGHT_ENABLE_GLOBE_DESC"
+          default="0"
+        >
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+      </fieldset>
+    </fields>
+  </config>
+</extension>

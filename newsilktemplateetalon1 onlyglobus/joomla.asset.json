@@ -1,0 +1,20 @@
+{
+  "$schema": "https://developer.joomla.org/schemas/json/joomla.asset.schema.json",
+  "name": "tpl_brics_freight",
+  "assets": [
+    {
+      "name": "tpl_brics_freight.styles",
+      "type": "style",
+      "uri": "css/template.css"
+    },
+    {
+      "name": "tpl_brics_freight.menu",
+      "type": "script",
+      "uri": "js/menu.js",
+      "attributes": {
+        "defer": true
+      }
+    }
+  ]
+}
+
